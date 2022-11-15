@@ -11,6 +11,10 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     />
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    >
     <script defer src="recipe.js"></script>
 </head>
 <body>
@@ -20,17 +24,21 @@
             <input 
                 type="search" 
                 style="width: 300px;"
-                placeholder="ingredients or recipe name"
+                placeholder="enter ingredients or recipe"
                 id="recipeSearch" 
                 name="recipeSearch"
             />
+            <button type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <div class="check-input-container">
+            <h4 class="mt-2 mb-4 text-center">You Entered</h4>
 
-            
         </div>
         <div class="text-center">
             <input
                 type="submit"
-                
                 class="btn btn-primary text"
                 value="submit"
                 id="submit"
