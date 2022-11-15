@@ -6,33 +6,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receipt App</title>
+    <title>Recipe App</title>
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     />
-    <script defer src="receipt.js"></script>
+    <script defer src="recipe.js"></script>
 </head>
 <body>
     <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
-        <h1 class="mt-2 mb-4 text-center">Search for receipts</h1> 
+        <h1 class="mt-2 mb-4 text-center">Search for Recipes</h1> 
         <div class="search-parameters mt-2 mb-4 text-center">
-            <input type="search" id="receiptSearch" name="receiptSearch">
+            <input 
+                type="search" 
+                style="width: 300px;"
+                placeholder="ingredients or recipe name"
+                id="recipeSearch" 
+                name="recipeSearch"
+            />
+
+            
         </div>
         <div class="text-center">
             <input
-            type="submit"
-            class="btn btn-primary text"
-            value="submit"
-            id="submit"
-            style="width:30%"
+                type="submit"
+                
+                class="btn btn-primary text"
+                value="submit"
+                id="submit"
+                style="width:30%"
             />
             <input
-            type="reset"
-            class="btn btn-secondary"
-            value="reset"
-            id="reset"
-            style="width:30%"
+                type="reset"
+                class="btn btn-secondary"
+                value="reset"
+                id="reset"
+                style="width:30%"
             />
       </div>
     </form>  
