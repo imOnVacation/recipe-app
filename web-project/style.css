@@ -1,0 +1,9 @@
+.container {
+  transform: scale(2);
+}
+
+body {
+  margin: 100px 10%;
+  font-size: 1.2em;
+  font-family: arial;
+}
