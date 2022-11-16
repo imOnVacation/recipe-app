@@ -6,12 +6,46 @@
   padding: 0;
 }
 
-header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 20px 10%;
-  margin-right: auto;
+.topnav {
+  padding: 10px 10%;
+  color:maroon;
+  background-color:azure;
+  overflow: hidden;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: maroon;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: lightgray;
+  display: block;
+  position: absolute;
+  right: 0;
+  top:0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #04aa6d;
+  color: #d21515;
+}
+
+h3 {
+  color: orange;
 }
 
 .container {
@@ -22,4 +56,9 @@ body {
   margin: 100px 10%;
   font-size: 1.2em;
   font-family: arial;
+
+  background-image: url('web_background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
