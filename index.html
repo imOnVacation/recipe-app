@@ -10,20 +10,26 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="recipe.js"></script>
   </head>
   <body>
-    <header>
-      <h4 class="appName">FindRecipe</h4>
-    </header>
+    <div class="topnav" id="myTopnav">
+      <h4>FindRecipe</h4>
+      <div id="myLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+      </div>
+        <a href="#" class="icon" onclick="hamburgerMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
     <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
-      <h2 class="mt-2 mb-4 text-center">Search for Recipes</h2>
+      <h5 class="mt-2 mb-4 text-center">Select ingredients that you want to include.<br>You can also type the ingredients or recipe in the search bar.</h5>
       <h3>Meat &#129385;</h3>
       <span class="container"
         >Chicken
