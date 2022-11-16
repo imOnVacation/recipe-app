@@ -7,22 +7,18 @@
 }
 
 .topnav {
-  padding: 10px 10%;
+  padding: 0px 3%;
   color:maroon;
   background-color:azure;
   overflow: hidden;
   position: relative;
 }
 
-.topnav #myLinks {
-  display: none;
-}
-
 .topnav a {
   color: maroon;
   padding: 16px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
   display: block;
 }
 
@@ -34,18 +30,8 @@
   top:0;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.active {
-  background-color: #04aa6d;
-  color: #d21515;
-}
-
-h3 {
-  color: orange;
+h4 {
+  color:maroon;
 }
 
 .container {
