@@ -4,3 +4,6 @@ const clickButtonHandler = (evt) => {
     document.getElementById("receiptSearch").value += `, ${evt.value}`;
   } else document.getElementById("receiptSearch").value += evt.value;
 };
+
+function redirectHomePage() {}
+function redirectAboutPage() {}
