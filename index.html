@@ -10,12 +10,17 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script defer src="recipe.js"></script>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script defer src="web-project/recipe.js"></script>
   </head>
   <body>
     <div class="topnav">
@@ -26,42 +31,82 @@
     </div>
     <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
       <h5 class="mt-2 mb-4 text-center">
-        Welcome to FindRecipe!<br>
-        Select ingredients that you want to include.<br>
-        You can also type the ingredients or recipe in the search bar.</h5>
-      <h4>Meat &#129385;</h4>
-      <span class="container"
-        >Chicken
-        <input type="checkbox" style="display: inline-block" />
-        <span class="checkmark"></span
-      ></span>
-      <span class="container"
-        >Beef
-        <input type="checkbox" style="display: inline-block" />
-        <span class="checkmark"></span
-      ></span>
-      <h4>Vegetable</h4>
-      <span class="container"
-        >Lettuce
-        <input type="checkbox" style="display: inline-block" />
-        <span class="checkmark"></span
-      ></span>
-      <span class="container"
-        >Broccoli
-        <input type="checkbox" style="display: inline-block" />
-        <span class="checkmark"></span
-      ></span>
-      <h4>Fruit</h4>
-      <span class="container"
-        >Apple
-        <input type="checkbox" style="display: inline-block" />
-        <span class="checkmark"></span
-      ></span>
-      <span class="container"
-        >Tomato
-        <input type="checkbox" style="display: inline-block" />
-        <span class="checkmark"></span
-      ></span>
+        Welcome to FindRecipe!<br />
+        Select ingredients that you want to include.<br />
+        You can also type the ingredients or recipe in the search bar.
+      </h5>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <div id="Food" style="width: 450px; height: 250px">
+        <h4>Meat &#129385;</h4>
+        <span class="container">
+          <input
+            id="1"
+            name="1"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="1">
+            <div id="thing">Chicken</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="2"
+            name="2"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="2">
+            <div id="thing">Beef</div>
+          </label>
+        </span>
+        <h4>Vegetable</h4>
+        <span class="container">
+          <input
+            id="3"
+            name="3"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="3">
+            <div id="thing">Lettuce</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="4"
+            name="4"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="4">
+            <div id="thing">Broccoli</div>
+          </label>
+        </span>
+        <h4>Fruit</h4>
+        <span class="container">
+          <input
+            id="5"
+            name="5"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="5">
+            <div id="thing">Apple</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="6"
+            name="6"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="6">
+            <div id="thing">Tomato</div>
+          </label>
+        </span>
+      </div>
       <div class="searchBar mt-2 mb-4 text-center">
         <input
           type="search"
@@ -76,6 +121,9 @@
       </div>
       <div class="check-input-container">
         <h4 class="mt-2 mb-4 text-center">You Entered</h4>
+      </div>
+      <div id="selectedServices">
+        <span class="container" id="myDiv"></span>
       </div>
       <div class="text-center">
         <input

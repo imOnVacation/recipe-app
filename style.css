@@ -8,8 +8,8 @@
 
 .topnav {
   padding: 0px 3%;
-  color:maroon;
-  background-color:azure;
+  color: maroon;
+  background-color: azure;
   overflow: hidden;
   position: relative;
 }
@@ -27,18 +27,18 @@
   display: block;
   position: absolute;
   right: 0;
-  top:0;
+  top: 0;
 }
 
 h4 {
-  color:maroon;
+  color: maroon;
 }
 
 .container {
   transform: scale(2);
 }
 
-.searchBar{
+.searchBar {
   padding: 10px;
 }
 
