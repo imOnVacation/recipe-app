@@ -38,15 +38,40 @@ h4 {
   transform: scale(2);
 }
 
+.aboutStyle {
+  display: block;
+  margin: auto; 
+  width: fit-content;            
+  padding-top: 80px;  
+  border-bottom: 2px solid maroon;
+}
+
+.aboutMsgStyle{
+  display: block;
+  margin: auto; 
+  width: 50%;            
+  padding-top: 30px; 
+  font-size: 1.2em;
+}
+
+.email {
+  display: block;
+  margin: auto; 
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
 .searchBar {
   padding: 10px;
 }
 
-body {
+body{
   margin: 100px 10%;
   font-size: 1.2em;
   font-family: arial;
+}
 
+.mainPage{
   background-image: url('web_background.jpeg');
   background-repeat: no-repeat;
   background-attachment: fixed;
