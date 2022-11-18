@@ -1,31 +1,22 @@
 const clickButtonHandler = (evt) => {
-  const result = document.getElementById('receiptSearch').value;
+  const result = document.getElementById("receiptSearch").value;
   if (result) {
-    document.getElementById('receiptSearch').value += `, ${evt.value}`;
-  } else document.getElementById('receiptSearch').value += evt.value;
+    document.getElementById("receiptSearch").value += `, ${evt.value}`;
+  } else document.getElementById("receiptSearch").value += evt.value;
 };
 
-function hamburgerMenu() {
-  var x = document.getElementById('myLinks');
-  if (x.style.display === 'block') {
-    x.style.display = 'none';
-  } else {
-    x.style.display = 'block';
-  }
-}
+var results = $("#myDiv"),
+  checks = $("#Food input[type=checkbox]");
 
-var results = $('#myDiv'),
-  checks = $('#Food input[type=checkbox]');
-
-checks.on('change', function () {
+checks.on("change", function () {
   var clones = checks
-    .filter(':checked')
+    .filter(":checked")
     .next()
     .addBack()
     .clone()
     .each(function () {
-      if (this.id && this.type && this.type === 'checkbox') {
-        this.removeAttribute('id');
+      if (this.id && this.type && this.type === "checkbox") {
+        this.removeAttribute("id");
       }
     });
   results.empty().append(clones);

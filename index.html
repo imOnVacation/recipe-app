@@ -23,20 +23,24 @@
     />
     <script defer src="web-project/recipe.js"></script>
   </head>
-  <body>
+  <body class="mainPage">
     <div class="topnav">
       <div class="navbar">
-        <a href="#home" onclick="redirectHomePage()">FindRecipe</a>
-        <a href="#about" onclick="redirectAboutPage()">About Us</a>
+        <a href="index.html">FindRecipe</a>
+        <a href="about.html">About Us</a>
       </div>
     </div>
     <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
-      <h5 class="mt-2 mb-4 text-center">
+      <p class="intro-msg mt-2 mb-4 text-center">
         Welcome to FindRecipe!<br />
         Select ingredients that you want to include.<br />
         You can also type the ingredients or recipe in the search bar.
-      </h5>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      </p>
+
+      <p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      </p>
+
       <div class="checkboxes" id="Food" style="width: auto; height: 250px">
         <h4>Meat &#129385;</h4>
         <span class="container">
@@ -219,20 +223,20 @@
           </label>
         </span>
       </div>
-      <div class="searchBar mt-2 mb-4 text-center">
+
+      <div class="search text-center">
         <input
-          type="search"
-          style="width: 300px"
+          type="text"
           placeholder="enter ingredients or recipe"
-          id="recipeSearch"
-          name="recipeSearch"
+          class="searchTerm"
         />
-        <button type="submit" onclick="addcheck()">
+        <button class="searchButton" type="submit" onclick="addcheck()">
           <i class="fa fa-search"></i>
         </button>
       </div>
+
       <div class="check-input-container">
-        <h4 class="mt-2 mb-4 text-center">You Entered</h4>
+        <p class="text-center"><br />You Entered</p>
       </div>
       <div class="outer" id="selectedServices">
         <p><span class="List" id="myDiv" id="UserInput"></span></p>
@@ -243,7 +247,7 @@
         <input
           type="submit"
           class="btn btn-primary text"
-          value="submit"
+          value="Find a recipe"
           id="submit"
           style="width: 30%"
         />

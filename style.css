@@ -30,8 +30,51 @@
   top: 0;
 }
 
+.navbar {
+  font-weight: bold;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-right: none;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: black;
+}
+
+.searchButton {
+  width: 40px;
+  height: 30px;
+  border: 1px solid lightgrey;
+  background: lightslategray;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 h4 {
   color: maroon;
+  padding-top: 10px;
+}
+
+.intro-msg {
+  border-style: dashed;
+  border-width: fit-content;
 }
 
 .container {
@@ -48,6 +91,43 @@ h4 {
 input[type='checkbox'] {
   display: inline-block;
   width: auto;
+  display: inline-flexbox;
+}
+
+label {
+  vertical-align: middle;
+  width: 100px;
+}
+
+.check-input-container {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  padding-top: 10px;
+  border-bottom: 2px solid maroon;
+}
+
+.aboutStyle {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  padding-top: 80px;
+  border-bottom: 2px solid maroon;
+}
+
+.aboutMsgStyle {
+  display: block;
+  margin: auto;
+  width: 50%;
+  padding-top: 30px;
+  font-size: 1.2em;
+}
+
+.email {
+  display: block;
+  margin: auto;
+  font-size: 1.2em;
+  text-decoration: underline;
 }
 
 .List {
@@ -60,16 +140,13 @@ input[type='checkbox'] {
   padding: 10px;
 }
 
-label {
-  vertical-align: middle;
-  width: 50px;
-}
-
 body {
   margin: 100px 10%;
   font-size: 1.2em;
   font-family: arial;
+}
 
+.mainPage {
   background-image: url('web_background.jpeg');
   background-repeat: no-repeat;
   background-attachment: fixed;
