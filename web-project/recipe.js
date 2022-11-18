@@ -30,3 +30,27 @@ checks.on('change', function () {
     });
   results.empty().append(clones);
 });
+
+function addcheck() {
+  var checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.id = document.getElementById('recipeSearch').value;
+  checkbox.name = document.getElementById('recipeSearch').value;
+  checkbox.value = document.getElementById('recipeSearch').value;
+  checkbox.checked = true;
+
+  var label = document.createElement('label');
+  label.htmlFor = document.getElementById('recipeSearch').value;
+  label.appendChild(
+    document.createTextNode(document.getElementById('recipeSearch').value)
+  );
+
+  var container = document.getElementById('UserInput');
+  container.appendChild(checkbox);
+  container.appendChild(label);
+  event.preventDefault();
+}
+
+function reset() {
+  history.go(0);
+}

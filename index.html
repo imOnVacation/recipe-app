@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style></style>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,73 +37,184 @@
         You can also type the ingredients or recipe in the search bar.
       </h5>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <div id="Food" style="width: 450px; height: 250px">
+      <div class="checkboxes" id="Food" style="width: auto; height: 250px">
         <h4>Meat &#129385;</h4>
         <span class="container">
           <input
-            id="1"
-            name="1"
+            id="1001"
+            name="1001"
             type="checkbox"
             style="display: inline-block"
           />
-          <label for="1">
+          <label for="1001">
             <div id="thing">Chicken</div>
           </label>
         </span>
         <span class="container">
           <input
-            id="2"
-            name="2"
+            id="1002"
+            name="1002"
             type="checkbox"
             style="display: inline-block"
           />
-          <label for="2">
+          <label for="1002">
             <div id="thing">Beef</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="1003"
+            name="1003"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="1003">
+            <div id="thing">Pork</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="1004"
+            name="1004"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="1004">
+            <div id="thing">Sausage</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="1005"
+            name="1005"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="1005">
+            <div id="thing">Lamb</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="1006"
+            name="1006"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="1006">
+            <div id="thing">Fish</div>
+          </label>
+        </span>
+
+        <span class="container">
+          <input
+            id="1007"
+            name="1007"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="1007">
+            <div id="thing">Crab</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="1008"
+            name="1008"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="1008">
+            <div id="thing">Shrimp</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="1009"
+            name="1009"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="1009">
+            <div id="thing">Turkey</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="1010"
+            name="1010"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="1010">
+            <div id="thing">Lobster</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="1011"
+            name="1011"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="1011">
+            <div id="thing">Ham</div>
+          </label>
+        </span>
+        <span class="container">
+          <input
+            id="1012"
+            name="1012"
+            type="checkbox"
+            style="display: inline-block"
+          />
+          <label for="1012">
+            <div id="thing">Bacon</div>
           </label>
         </span>
         <h4>Vegetable</h4>
         <span class="container">
           <input
-            id="3"
-            name="3"
+            id="2001"
+            name="2001"
             type="checkbox"
             style="display: inline-block"
           />
-          <label for="3">
+          <label for="2001">
             <div id="thing">Lettuce</div>
           </label>
         </span>
         <span class="container">
           <input
-            id="4"
-            name="4"
+            id="2002"
+            name="2002"
             type="checkbox"
             style="display: inline-block"
           />
-          <label for="4">
+          <label for="2002">
             <div id="thing">Broccoli</div>
           </label>
         </span>
         <h4>Fruit</h4>
         <span class="container">
           <input
-            id="5"
-            name="5"
+            id="3001"
+            name="3001"
             type="checkbox"
             style="display: inline-block"
           />
-          <label for="5">
+          <label for="3001">
             <div id="thing">Apple</div>
           </label>
         </span>
         <span class="container">
           <input
-            id="6"
-            name="6"
+            id="3002"
+            name="3002"
             type="checkbox"
             style="display: inline-block"
           />
-          <label for="6">
+          <label for="3002">
             <div id="thing">Tomato</div>
           </label>
         </span>
@@ -115,16 +227,18 @@
           id="recipeSearch"
           name="recipeSearch"
         />
-        <button type="submit">
+        <button type="submit" onclick="addcheck()">
           <i class="fa fa-search"></i>
         </button>
       </div>
       <div class="check-input-container">
         <h4 class="mt-2 mb-4 text-center">You Entered</h4>
       </div>
-      <div id="selectedServices">
-        <span class="container" id="myDiv"></span>
+      <div class="outer" id="selectedServices">
+        <p><span class="List" id="myDiv" id="UserInput"></span></p>
+        <span class="List" id="UserInput"></span>
       </div>
+      <br />
       <div class="text-center">
         <input
           type="submit"
@@ -139,6 +253,7 @@
           value="reset"
           id="reset"
           style="width: 30%"
+          onclick="location.reload();"
         />
       </div>
     </form>
