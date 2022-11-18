@@ -30,11 +30,11 @@
       </div>
     </div>
     <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
-      <h5 class="mt-2 mb-4 text-center">
+      <p class="intro-msg mt-2 mb-4 text-center">
         Welcome to FindRecipe!<br />
         Select ingredients that you want to include.<br />
         You can also type the ingredients or recipe in the search bar.
-      </h5>
+      <p>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <div id="Food" style="width: 450px; height: 250px">
         <h4>Meat &#129385;</h4>
@@ -107,18 +107,18 @@
           </label>
         </span>
       </div>
-      <div class="searchBar mt-2 mb-4 text-center">
+
+      <div class="searchBar text-center">
         <input
-          type="search"
-          style="width: 300px"
+          type="text"
           placeholder="enter ingredients or recipe"
           id="recipeSearch"
-          name="recipeSearch"
         />
-        <button type="submit">
+        <button class="searchBtn" type="submit">
           <i class="fa fa-search"></i>
         </button>
       </div>
+
       <div class="check-input-container">
         <h4 class="mt-2 mb-4 text-center">You Entered</h4>
       </div>
@@ -129,7 +129,7 @@
         <input
           type="submit"
           class="btn btn-primary text"
-          value="submit"
+          value="Find a recipe"
           id="submit"
           style="width: 30%"
         />

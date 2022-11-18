@@ -30,8 +30,39 @@
   top: 0;
 }
 
+.navbar{
+  font-weight: bold;
+}
+
+.searchBar{
+  padding: 6px;
+  margin-top:8px;
+  margin-right:16px;
+  font-size:17px;
+  position: relative;
+}
+
+.searchBtn{
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.searchBtn:hover {
+  background: #ccc;
+}
+
 h4 {
   color: maroon;
+}
+
+.intro-msg {
+  border-style: dashed;
+  border-width: fit-content;  
 }
 
 .container {
