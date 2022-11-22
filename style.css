@@ -35,9 +35,11 @@
 }
 
 .search {
-  width: 100%;
-  position: relative;
+  width: 70%;
   display: flex;
+  padding-top: 30px;
+  text-align: center;
+  margin: auto;
 }
 
 .searchTerm {
@@ -96,7 +98,7 @@ input[type='checkbox'] {
 
 label {
   vertical-align: middle;
-  width: 50px;
+  width: 70px;
 }
 
 .check-input-container {
@@ -104,7 +106,8 @@ label {
   margin: auto;
   width: fit-content;
   padding-top: 10px;
-  border-bottom: 2px solid maroon;
+  color: maroon;
+  font-weight: bold;
 }
 
 .aboutStyle {
@@ -132,10 +135,10 @@ label {
 
 .List {
   display: block;
-  padding: 32px 32px;
   margin-right: 11px;
   position: relative;
 }
+
 .searchBar {
   padding: 10px;
 }
@@ -154,7 +157,7 @@ body {
 }
 
 .outer {
-  border: 2px solid rgb(40, 207, 96);
+  border: 2px solid maroon;
   padding: 16px 16px;
   border-style: solid;
   display: block;
