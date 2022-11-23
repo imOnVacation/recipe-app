@@ -114,6 +114,12 @@ label {
   position: relative;
 }
 
+.DisplayBox {
+  display: block;
+  padding: 16px 16px;
+  margin-right: 11px;
+  position: relative;
+}
 .searchBar {
   padding: 10px;
 }
@@ -136,4 +142,22 @@ label {
 
 .outer > div {
   border: 1px solid green;
+}
+
+.right {
+  float: right;
+  height: 60%;
+  background: cyan;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.w-32 {
+  width: 42rem;
+}
+
+.border {
+  background-color: #f6ad55;
 }
