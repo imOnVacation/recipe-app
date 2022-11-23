@@ -1,19 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .topnav {
   padding: 0px 3%;
   color: maroon;
   background-color: azure;
   overflow: hidden;
   position: relative;
+  font-weight: bold;
 }
-
 .topnav a {
   color: maroon;
   padding: 16px 16px;
@@ -22,22 +16,16 @@
   display: block;
 }
 
-.topnav a.icon {
-  background: lightgray;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 .navbar {
   font-weight: bold;
 }
 
 .search {
-  width: 100%;
-  position: relative;
+  width: 70%;
   display: flex;
+  padding-top: 30px;
+  text-align: center;
+  margin: auto;
 }
 
 .searchTerm {
@@ -48,10 +36,6 @@
   height: 30px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: #9dbfaf;
-}
-
-.searchTerm:focus {
   color: black;
 }
 
@@ -77,26 +61,19 @@ h4 {
   border-width: fit-content;
 }
 
-.container {
-  transform: scale(3);
-  position: relative;
-  text-indent: 2px;
-  vertical-align: middle;
-}
-
-.checkboxes {
-  display: contents !important;
-}
-
 input[type='checkbox'] {
-  display: inline-block;
-  width: auto;
-  display: inline-flexbox;
+  width: 20px;
 }
 
 label {
+  display: inline-block;
   vertical-align: middle;
-  width: 50px;
+  width: 120px;
+  text-indent: 5px;
+}
+
+.List {
+  display: inline-block;
 }
 
 .check-input-container {
@@ -104,7 +81,8 @@ label {
   margin: auto;
   width: fit-content;
   padding-top: 10px;
-  border-bottom: 2px solid maroon;
+  color: maroon;
+  font-weight: bold;
 }
 
 .aboutStyle {
@@ -132,7 +110,6 @@ label {
 
 .List {
   display: block;
-  padding: 32px 32px;
   margin-right: 11px;
   position: relative;
 }
@@ -147,12 +124,6 @@ label {
   padding: 10px;
 }
 
-body {
-  margin: 100px 10%;
-  font-size: 1.2em;
-  font-family: arial;
-}
-
 .mainPage {
   background-image: url('web_background.jpeg');
   background-repeat: no-repeat;
@@ -161,7 +132,7 @@ body {
 }
 
 .outer {
-  border: 2px solid rgb(40, 207, 96);
+  border: 2px solid maroon;
   padding: 16px 16px;
   border-style: solid;
   display: block;
