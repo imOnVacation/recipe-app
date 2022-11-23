@@ -1,33 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .topnav {
   padding: 0px 3%;
   color: maroon;
   background-color: azure;
   overflow: hidden;
   position: relative;
+  font-weight: bold;
 }
-
 .topnav a {
   color: maroon;
   padding: 16px 16px;
   text-decoration: none;
   font-size: 15px;
   display: block;
-}
-
-.topnav a.icon {
-  background: lightgray;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 
 .navbar {
@@ -50,10 +36,6 @@
   height: 30px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: #9dbfaf;
-}
-
-.searchTerm:focus {
   color: black;
 }
 
@@ -79,26 +61,19 @@ h4 {
   border-width: fit-content;
 }
 
-.container {
-  transform: scale(3);
-  position: relative;
-  text-indent: 2px;
-  vertical-align: middle;
-}
-
-.checkboxes {
-  display: contents !important;
-}
-
 input[type='checkbox'] {
-  display: inline-block;
-  width: auto;
-  display: inline-flexbox;
+  width: 20px;
 }
 
 label {
+  display: inline-block;
   vertical-align: middle;
-  width: 70px;
+  width: 120px;
+  text-indent: 5px;
+}
+
+.List {
+  display: inline-block;
 }
 
 .check-input-container {
@@ -141,12 +116,6 @@ label {
 
 .searchBar {
   padding: 10px;
-}
-
-body {
-  margin: 100px 10%;
-  font-size: 1.2em;
-  font-family: arial;
 }
 
 .mainPage {
