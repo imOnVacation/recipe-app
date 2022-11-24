@@ -18,7 +18,7 @@ checks.on('change', function () {
     .clone()
     .each(function () {
       if (this.id && this.type && this.type === 'checkbox') {
-        this.removeAttribute('value');
+        this.removeAttribute('id');
       }
     });
   results.empty().append(clones);
@@ -58,31 +58,52 @@ function showSelectedValues() {
     .join(',');
 }
 
-function GetMeal() {
+function GetRecipe() {
   var arr = showSelectedValues().toString().split(',');
-  let unique = [...new Set(arr)];
+  var unique = [...new Set(arr)];
   unique = encodeURIComponent(unique);
-  let result = '';
+  var result = '';
   fetch(
     `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${unique}&number=30&ranking=2&ignorePantry=true&apiKey=${apiKey}`
   )
     .then((response) => response.json())
     .then((data) => {
       data.forEach((p) => {
+        var missed = '';
+        var i = 1;
+        p.missedIngredients.forEach((miss) => {
+          missed += `${i}. ${miss.name} <br>`;
+          ++i;
+        });
         result += `
-          <div id="keyBoard" class="col-md-4 mt-2">
+          <div id="keyBoard" class="col-md-3 mt-2" style="display: inline-block">
               <div class="card" style="width: 18rem;">
                   <img src="${p.image}" class="card-img-top img-fluid" alt="keyboard">
                   <div class="card-body">
                       <h5 class="card-title" id="itemName">${p.title}</h5>
-                      <p class="card-text" id="itemDesc">${p.title}</p>
-                      <p class="card-text">${p.title}</p>
-                      <a href="#" class="btn btn-primary" id="redirect">Get instruction</a>
+                      <p class="card-text" id="itemDesc">Missed Ingredients Count: ${p.missedIngredientCount}</p>
+                      <p class="card-text""><h6>Missed Ingredients:</h6> ${missed}</p>
+                      <p class="card-text">Used ingredients Count: ${p.usedIngredientCount}</p>
+                      <a href="#" class="btn btn-primary" id="redirect" onClick = "GetURL(${p.id})">Get instruction</a>
                   </div>
               </div>
           </div>`;
       });
       document.querySelector('#Out').innerHTML = result;
+    })
+    .catch(() => {
+      console.log('error');
+    });
+  event.preventDefault();
+}
+
+function GetURL(id) {
+  fetch(
+    `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${apiKey}`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      location.href = `${data.spoonacularSourceUrl}`;
     })
     .catch(() => {
       console.log('error');
