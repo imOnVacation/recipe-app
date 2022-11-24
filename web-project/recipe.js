@@ -18,30 +18,59 @@ checks.on('change', function () {
     .clone()
     .each(function () {
       if (this.id && this.type && this.type === 'checkbox') {
-        this.removeAttribute('value');
+        this.removeAttribute('id');
       }
     });
   results.empty().append(clones);
 });
 
+// $(function () {
+//   $(':checkbox').change(function () {
+//     var arr = $(':checkbox:checked')
+//       .map(function () {
+//         return $(this).next().html();
+//       })
+//       .get();
+//     $('#myDiv').html(arr.join(', '));
+//   });
+// });
+
+// function addcheck() {
+//   var checkbox = document.createElement('input');
+//   checkbox.type = 'checkbox';
+//   checkbox.id = document.getElementById('ingredients').value;
+//   checkbox.name = document.getElementById('ingredients').value;
+//   checkbox.value = document.getElementById('ingredients').value;
+//   checkbox.class = 'campaignCheckBox';
+//   checkbox.checked = true;
+
+//   var label = document.createElement('label');
+//   label.htmlFor = document.getElementById('ingredients').value;
+//   label.appendChild(
+//     document.createTextNode(document.getElementById('ingredients').value)
+//   );
+
+//   var container = document.getElementById('UserInput');
+//   container.appendChild(checkbox);
+//   container.appendChild(label);
+//   event.preventDefault();
+// }
+
 function addcheck() {
-  var checkbox = document.createElement('input');
-  checkbox.type = 'checkbox';
-  checkbox.id = document.getElementById('ingredients').value;
-  checkbox.name = document.getElementById('ingredients').value;
-  checkbox.value = document.getElementById('ingredients').value;
-  checkbox.class = 'campaignCheckBox';
-  checkbox.checked = true;
-
-  var label = document.createElement('label');
-  label.htmlFor = document.getElementById('ingredients').value;
-  label.appendChild(
-    document.createTextNode(document.getElementById('ingredients').value)
-  );
-
-  var container = document.getElementById('UserInput');
-  container.appendChild(checkbox);
-  container.appendChild(label);
+  var out = '';
+  var value = document.getElementById('ingredients').value;
+  var check = document.getElementById(value);
+  if (!value) {
+    window.alert('Please enter ingredient');
+  } else if (!check) {
+    out += `<label>
+            <input id=${value} name=${value}  type='checkbox' value=${value} checked=true />
+            <for>${value}</for>
+          </label>`;
+    document.querySelector('#UserInput').innerHTML += out;
+  } else {
+    window.alert('You already have this ingredient in the box');
+  }
   event.preventDefault();
 }
 
@@ -63,7 +92,11 @@ function GoResult() {
   var unique = [...new Set(arr)];
   unique = encodeURIComponent(unique);
   localStorage['checkArr'] = unique;
-  location.href = 'result.html';
+  if (unique.length === 0) {
+    window.alert("You didn't select anything");
+  } else {
+    location.href = 'result.html';
+  }
   event.preventDefault();
 }
 

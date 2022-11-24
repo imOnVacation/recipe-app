@@ -225,7 +225,12 @@
           class="searchTerm"
           id="ingredients"
         />
-        <button class="searchButton" type="submit" onclick="addcheck()">
+        <button
+          class="searchButton"
+          type="submit"
+          id="submit"
+          onclick="addcheck()"
+        >
           <i class="fa fa-search"></i>
         </button>
       </div>
@@ -233,7 +238,7 @@
         <p class="text-center"><br />You Entered</p>
       </div>
       <div class="outer rounded" id="selectedServices">
-        <p><span class="List" id="myDiv"></span></p>
+        <!-- <span class="List" id="myDiv"></span> -->
         <span class="List" id="UserInput"></span>
       </div>
       <br />
@@ -243,7 +248,7 @@
           class="btn btn-primary text"
           value="Find a recipe"
           id="submit"
-          onclick="GetRecipe()"
+          onclick="GoResult()"
         />
         <input
           type="reset"
