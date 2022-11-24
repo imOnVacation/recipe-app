@@ -26,8 +26,8 @@
         <a href="about.html">About Us</a>
       </div>
     </div>
-    <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
-      <p class="intro-msg mt-2 mb-4 text-center">
+    <form class="bg-light rounded w-50 mx-auto mt-5 p-3">
+      <p class="intro-msg rounded mt-2 mb-4 text-center">
         Welcome to FindRecipe!<br />
         Select ingredients that you want to include.<br />
         You can also type the ingredients or recipe in the search bar.
@@ -232,7 +232,7 @@
       <div class="check-input-container">
         <p class="text-center"><br />You Entered</p>
       </div>
-      <div class="outer" id="selectedServices">
+      <div class="outer rounded" id="selectedServices">
         <p><span class="List" id="myDiv"></span></p>
         <span class="List" id="UserInput"></span>
       </div>
@@ -243,7 +243,7 @@
           class="btn btn-primary text"
           value="Find a recipe"
           id="submit"
-          onclick="GoResult()"
+          onclick="GetRecipe()"
         />
         <input
           type="reset"

@@ -16,10 +16,10 @@ function GetRecipe() {
           ++i;
         });
         result += `
-          <div id="keyBoard" class="col-md-3 mt-2" style="display: inline-block">
-              <div class="card" style="width: 18rem;">
+          <div id="keyBoard" class="col-md-3 mt-2" style="display: inline-block; padding:0.5rem;">
+              <div class="card" style="width: auto;">
                   <img src="${p.image}" class="card-img-top img-fluid" alt="keyboard">
-                  <div class="card-body">
+                  <div class="card-body" >
                       <h5 class="card-title" id="itemName">${p.title}</h5>
                       <p class="card-text" id="itemDesc">Missed Ingredients Count: ${p.missedIngredientCount}</p>
                       <p class="card-text""><h6>Missed Ingredients:</h6> ${missed}</p>

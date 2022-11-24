@@ -59,6 +59,8 @@ h4 {
 .intro-msg {
   border-style: dashed;
   border-width: fit-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 input[type='checkbox'] {
@@ -114,12 +116,6 @@ label {
   position: relative;
 }
 
-.DisplayBox {
-  display: block;
-  padding: 16px 16px;
-  margin-right: 11px;
-  position: relative;
-}
 .searchBar {
   padding: 10px;
 }
@@ -148,12 +144,33 @@ label {
   width: auto;
 }
 
-.right {
-  float: right;
-  height: 60%;
-  background: cyan;
+.resultTitle {
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: darkblue;
+  border-style: groove;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: azure;
+  border: 1px solid lightgrey;
 }
 
-.border {
-  background-color: #f6ad55;
+div.apiResultBlock {
+  margin: auto;
+  display: table-cell;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+span.DisplayBox {
+  display: block;
+  padding: 16px 16px;
+  margin-right: 11px;
+  position: relative;
 }
