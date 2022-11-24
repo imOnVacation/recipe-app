@@ -26,18 +26,13 @@
         <a href="about.html">About Us</a>
       </div>
     </div>
-    <form
-      class="bg-light border rounded w-25 mx-auto mt-5 p-3"
-      style="float: left"
-    >
+    <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
       <p class="intro-msg mt-2 mb-4 text-center">
         Welcome to FindRecipe!<br />
         Select ingredients that you want to include.<br />
         You can also type the ingredients or recipe in the search bar.
       </p>
-      <p>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      </p>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <div class="checkboxes" id="Food">
         <h4>Meat &#129385;</h4>
         <label>
@@ -251,7 +246,6 @@
           class="btn btn-primary text"
           value="Find a recipe"
           id="submit"
-          style="width: auto"
           onclick="GetRecipe()"
         />
         <input
@@ -259,16 +253,9 @@
           class="btn btn-secondary"
           value="reset"
           id="reset"
-          style="width: auto"
           onclick="location.reload();"
         />
       </div>
-    </form>
-    <form class="bg-light border rounded w-75 h-75 mt-5 p-3 style=float: right">
-      <p class="intro-msg mt-2 mb-4 text-center">Recipe Output</p>
-      <div class="outer" id="Output">
-        <span class="DisplayBox" id="Out"></span>
-      </div>
-    </form>
+    </form> </br></br>
   </body>
 </html>

@@ -68,6 +68,7 @@ function GetRecipe() {
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       data.forEach((p) => {
         var missed = '';
         var i = 1;

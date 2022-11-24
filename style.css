@@ -144,6 +144,10 @@ label {
   border: 1px solid green;
 }
 
+.text-center {
+  width: auto;
+}
+
 .right {
   float: right;
   height: 60%;
