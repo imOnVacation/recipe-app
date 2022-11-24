@@ -26,7 +26,10 @@
         <a href="about.html">About Us</a>
       </div>
     </div>
-    <form class="bg-light border rounded w-25 mx-auto mt-5 p-3" style = "float: left;">
+    <form
+      class="bg-light border rounded w-25 mx-auto mt-5 p-3"
+      style="float: left"
+    >
       <p class="intro-msg mt-2 mb-4 text-center">
         Welcome to FindRecipe!<br />
         Select ingredients that you want to include.<br />
@@ -37,20 +40,25 @@
       </p>
       <div class="checkboxes" id="Food">
         <h4>Meat &#129385;</h4>
-        <label for="1001">
-          <input id="1001" name="1001" type="checkbox" value="Chicken" />Chicken
+        <label>
+          <input id="1001" name="1001" type="checkbox" value="Chicken" />
+          <for>Chicken</for>
         </label>
-        <label for="1002">
-          <input id="1002" name="1002" type="checkbox" value="Beef" />Beef
+        <label>
+          <input id="1002" name="1002" type="checkbox" value="Beef" />
+          <for>Beef</for>
         </label>
-        <label for="1003">
-          <input id="1003" name="1003" type="checkbox" value="Pork" />Pork
+        <label>
+          <input id="1003" name="1003" type="checkbox" value="Pork" />
+          <for>Pork</for>
         </label>
-        <label for="1004">
-          <input id="1004" name="1004" type="checkbox" value="Sausage" />Sausage
+        <label>
+          <input id="1004" name="1004" type="checkbox" value="Sausage" />
+          <for>Sausage</for>
         </label>
-        <label for="1005">
-          <input id="1005" name="1005" type="checkbox" value="Lamb" />Lamb
+        <label>
+          <input id="1005" name="1005" type="checkbox" value="Lamb" />
+          <for>Lamb</for>
         </label>
         <label for="1006">
           <input id="1006" name="1006" type="checkbox" value="Fish" />Fish
@@ -233,41 +241,38 @@
         </button>
       </div>
 
-        <div class="check-input-container">
-          <p class="text-center"><br />You Entered</p>
-        </div>
-        <div class="outer" id="selectedServices">
-          <p><span class="List" id="myDiv"></span></p>
-          <span class="List" id="UserInput"></span>
-        </div>
-        <br />
-        <div class="text-center">
-          <input
-            type="submit"
-            class="btn btn-primary text"
-            value="Find a recipe"
-            id="submit"
-            style="width: 30%"
-            onclick="GetMeal()"
-          />
-          <input
-            type="reset"
-            class="btn btn-secondary"
-            value="reset"
-            id="reset"
-            style="width: 30%"
-            onclick="location.reload();"
-          />
-        </div>
-      </form>
-      <form
-        class="bg-light border rounded w-75 h-75 mt-5 p-3 style=float: right"
-      >
-        <p class="intro-msg mt-2 mb-4 text-center">Recipe Output</p>
-        <div class="outer" id="Output">
-          <span class="DisplayBox" id="Out"></span>
-        </div>
-      </form>
-    </div>
+      <div class="check-input-container">
+        <p class="text-center"><br />You Entered</p>
+      </div>
+      <div class="outer" id="selectedServices">
+        <span class="List" id="myDiv"></span>
+        <span class="List" id="UserInput"></span>
+      </div>
+      <br />
+      <div class="text-center">
+        <input
+          type="submit"
+          class="btn btn-primary text"
+          value="Find a recipe"
+          id="submit"
+          style="width: 30%"
+          onclick="GetRecipe()"
+        />
+        <input
+          type="reset"
+          class="btn btn-secondary"
+          value="reset"
+          id="reset"
+          style="width: 30%"
+          onclick="location.reload();"
+        />
+      </div>
+    </form>
+    <form class="bg-light border rounded w-75 h-75 mt-5 p-3 style=float: right">
+      <p class="intro-msg mt-2 mb-4 text-center">Recipe Output</p>
+      <div class="outer" id="Output">
+        <span class="DisplayBox" id="Out"></span>
+      </div>
+    </form>
   </body>
 </html>
