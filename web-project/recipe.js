@@ -1,5 +1,3 @@
-// const apiKey = '73c936ba2f1245898d8cc4a17a7968df';
-
 const clickButtonHandler = (evt) => {
   const result = document.getElementById('receiptSearch').value;
   if (result) {
@@ -18,32 +16,38 @@ checks.on('change', function () {
     .clone()
     .each(function () {
       if (this.id && this.type && this.type === 'checkbox') {
+
         this.removeAttribute('value');
         this.style = 'display:none;';
+
       }
     });
   results.empty().append(clones);
 });
 
 function addcheck() {
-  var checkbox = document.createElement('input');
-  checkbox.type = 'checkbox';
-  checkbox.id = document.getElementById('ingredients').value;
-  checkbox.name = document.getElementById('ingredients').value;
-  checkbox.value = document.getElementById('ingredients').value;
-  checkbox.class = 'campaignCheckBox';
-  checkbox.checked = true;
-
-  var label = document.createElement('label');
-  label.htmlFor = document.getElementById('ingredients').value;
-  label.appendChild(
-    document.createTextNode(document.getElementById('ingredients').value)
-  );
-
-  var container = document.getElementById('UserInput');
-  container.appendChild(checkbox);
-  container.appendChild(label);
+  var out = '';
+  var value = document.getElementById('ingredients').value;
+  var check = document.getElementById(value);
+  if (!value) {
+    window.alert('Please enter ingredient');
+  } else if (!check) {
+    out += `<label id = ${value}>
+            <input id=${value} name=${value} class="userIn" type='checkbox' value=${value} checked=true onclick="ShowHideUserIn(this.checked, this.value)"/>${value}
+          </label>`;
+    document.querySelector('#UserInput').innerHTML += out;
+  } else {
+    window.alert('You already have this ingredient in the box');
+  }
   event.preventDefault();
+}
+
+function ShowHideUserIn(ischecked, value) {
+  if (ischecked) $(`#${value}`).show();
+  else {
+    data = document.getElementById(value);
+    data.remove();
+  }
 }
 
 function reset() {
@@ -64,6 +68,10 @@ function GoResult() {
   var unique = [...new Set(arr)];
   unique = encodeURIComponent(unique);
   localStorage['checkArr'] = unique;
-  location.href = 'result.html';
+  if (unique.length === 0) {
+    window.alert("You didn't select anything");
+  } else {
+    location.href = 'result.html';
+  }
   event.preventDefault();
 }
