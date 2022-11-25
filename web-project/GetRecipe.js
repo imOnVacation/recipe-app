@@ -21,7 +21,8 @@ function GetRecipe() {
                   <img src="${p.image}" class="card-img-top img-fluid" alt="keyboard">
                   <div class="card-body" >
                       <h5 class="card-title" id="itemName">${p.title}</h5>
-                      <p class="card-text" id="itemDesc">Missed Ingredients Count: ${p.missedIngredientCount}</p>
+                      <p class="card-text" id="itemDesc" style="color: crimson;"> 
+                          Missed Ingredients Count: ${p.missedIngredientCount}</p>
                       <p class="card-text""><h6>Missed Ingredients:</h6> ${missed}</p>
                       <p class="card-text">Used ingredients Count: ${p.usedIngredientCount}</p>
                       <a href="#" class="btn btn-primary" id="redirect" onClick = "GetURL(${p.id})">Get instruction</a>

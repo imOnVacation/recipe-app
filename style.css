@@ -74,10 +74,6 @@ label {
   text-indent: 5px;
 }
 
-.List {
-  display: inline-block;
-}
-
 .check-input-container {
   display: block;
   margin: auto;
@@ -111,9 +107,14 @@ label {
 }
 
 .List {
-  display: block;
-  margin-right: 11px;
-  position: relative;
+  display: inline-block;
+}
+
+.List for {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  text-indent: 5px;
 }
 
 .searchBar {
