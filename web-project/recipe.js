@@ -16,7 +16,10 @@ checks.on('change', function () {
     .clone()
     .each(function () {
       if (this.id && this.type && this.type === 'checkbox') {
-        this.removeAttribute('id');
+
+        this.removeAttribute('value');
+        this.style = 'display:none;';
+
       }
     });
   results.empty().append(clones);
