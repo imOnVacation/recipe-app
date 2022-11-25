@@ -29,12 +29,13 @@
     <form class="container rounded bg-light p-3 mt-5 mx-auto">
       <p class="intro-msg rounded mt-2 mb-4 text-center">
         Welcome to FindRecipe!<br />
-        Select ingredients that you want to include.<br />
+        Select ingredient that you want in the checkbox.<br />
+        Uncheck the checkbox if you want to remove the ingredient.<br />
         You can also type the ingredients or recipe in the search bar.
       </p>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <div class="checkboxes" id="Food">
-        <h4>Meat &#129385;</h4>
+        <h4>&#129385; Meat &#129385;</h4>
         <label>
           <input id="1001" name="1001" type="checkbox" value="Chicken" />
           <for>Chicken</for>
@@ -48,16 +49,16 @@
           <for>Pork</for>
         </label>
         <label>
-          <input id="1004" name="1004" type="checkbox" value="Sausage" />
-          <for>Sausage</for>
+          <input id="1004" name="1004" type="checkbox" value="Veal" />
+          <for>Veal</for>
         </label>
         <label>
           <input id="1005" name="1005" type="checkbox" value="Lamb" />
           <for>Lamb</for>
         </label>
         <label>
-          <input id="1006" name="1006" type="checkbox" value="Fish" />
-          <for>Fish</for>
+          <input id="1006" name="1006" type="checkbox" value="Buffalo" />
+          <for>Buffalo</for>
         </label>
         <label>
           <input id="1007" name="1007" type="checkbox" value="Crab" />
@@ -95,7 +96,39 @@
           <input id="1015" name="1015" type="checkbox" value="Squid" />
           <for>Squid</for>
         </label>
-        <h4>Vegetable &#129388;</h4>
+        <label>
+          <input id="1016" name="1016" type="checkbox" value="Salmon" />
+          <for>Salmon</for>
+        </label>
+        <label>
+          <input id="1017" name="1017" type="checkbox" value="Tuna" />
+          <for>Tuna</for>
+        </label>
+        <label>
+          <input id="1018" name="1018" type="checkbox" value="Sardines" />
+          <for>Sardines</for>
+        </label>
+        <label>
+          <input id="1019" name="1019" type="checkbox" value="Shellfish" />
+          <for>Shellfish</for>
+        </label>
+        <label>
+          <input id="1020" name="1020" type="checkbox" value="Ostrich" />
+          <for>Ostrich</for>
+        </label>
+        <label>
+          <input id="1021" name="1021" type="checkbox" value="Partridge" />
+          <for>Partridge</for>
+        </label>
+        <label>
+          <input id="1022" name="1022" type="checkbox" value="Keema" />
+          <for>Keema</for>
+        </label>
+        <label>
+          <input id="1023" name="1023" type="checkbox" value="Ostrich" />
+          <for>Ostrich</for>
+        </label>
+        <h4>&#129388; Vegetable &#129388;</h4>
         <label>
           <input id="2001" name="2001" type="checkbox" value="Lettuce" />
           <for>Lettuce</for>
@@ -156,7 +189,67 @@
           <input id="2015" name="2015" type="checkbox" value="Potato" />
           <for>Potato</for>
         </label>
-        <h4>Fruit &#127827;</h4>
+        <label>
+          <input id="2016" name="2016" type="checkbox" value="Drumstick" />
+          <for>Drumstick</for>
+        </label>
+        <label>
+          <input id="2017" name="2017" type="checkbox" value="Turnip" />
+          <for>Turnip</for>
+        </label>
+        <label>
+          <input id="2018" name="2018" type="checkbox" value="Spinach" />
+          <for>Spinach</for>
+        </label>
+        <label>
+          <input id="2019" name="2019" type="checkbox" value="Shallots" />
+          <for>Shallots</for>
+        </label>
+        <label>
+          <input id="2020" name="2020" type="checkbox" value="Leek" />
+          <for>Leek</for>
+        </label>
+        <label>
+          <input id="2021" name="2021" type="checkbox" value="Pumpkin" />
+          <for>Pumpkin</for>
+        </label>
+        <label>
+          <input id="2022" name="2022" type="checkbox" value="Jalapeno" />
+          <for>Jalapeno</for>
+        </label>
+        <label>
+          <input id="2023" name="2023" type="checkbox" value="Gherkins" />
+          <for>Gherkins</for>
+        </label>
+        <label>
+          <input id="2024" name="2024" type="checkbox" value="Fenugreek" />
+          <for>Genugreek</for>
+        </label>
+        <label>
+          <input id="2025" name="2025" type="checkbox" value="Zucchini" />
+          <for>Zucchini</for>
+        </label>
+        <label>
+          <input id="2026" name="2026" type="checkbox" value="Cauliflower" />
+          <for>Cauliflower</for>
+        </label>
+        <label>
+          <input id="2027" name="2027" type="checkbox" value="Capers" />
+          <for>Capers</for>
+        </label>
+        <label>
+          <input id="2028" name="2028" type="checkbox" value="Beetroot" />
+          <for>Beetroot</for>
+        </label>
+        <label>
+          <input id="2029" name="2029" type="checkbox" value="Artichoke" />
+          <for>Artichoke</for>
+        </label>
+        <label>
+          <input id="2030" name="2030" type="checkbox" value="Ginger" />
+          <for>Ginger</for>
+        </label>
+        <h4>&#127827; Fruit &#127827;</h4>
         <label>
           <input id="3001" name="3001" type="checkbox" value="Apple" />
           <for>Apple</for>
@@ -216,6 +309,86 @@
         <label>
           <input id="3015" name="3015" type="checkbox" value="Watermelon" />
           <for>Watermelon</for>
+        </label>
+        <label>
+          <input id="3016" name="3016" type="checkbox" value="Avocado" />
+          <for>Avocado</for>
+        </label>
+        <label>
+          <input id="3017" name="3017" type="checkbox" value="Cranberry" />
+          <for>Cranberry</for>
+        </label>
+        <label>
+          <input id="3018" name="3018" type="checkbox" value="Blueberry" />
+          <for>Blueberry</for>
+        </label>
+        <label>
+          <input id="3019" name="3019" type="checkbox" value="Papaya" />
+          <for>Papaya</for>
+        </label>
+        <label>
+          <input id="3020" name="3020" type="checkbox" value="Olives" />
+          <for>Olives</for>
+        </label>
+        <label>
+          <input id="3021" name="3021" type="checkbox" value="Sultana" />
+          <for>Sultana</for>
+        </label>
+        <label>
+          <input id="3022" name="3022" type="checkbox" value="Mulberry" />
+          <for>Mulberry</for>
+        </label>
+        <label>
+          <input id="3023" name="3023" type="checkbox" value="Lychee" />
+          <for>Lychee</for>
+        </label>
+        <label>
+          <input id="3024" name="3024" type="checkbox" value="Raisins" />
+          <for>Raisins</for>
+        </label>
+        <label>
+          <input id="3025" name="3025" type="checkbox" value="Jamun" />
+          <for>Jamun</for>
+        </label>
+        <label>
+          <input id="3026" name="3026" type="checkbox" value="Tamarind" />
+          <for>Tamarind</for>
+        </label>
+        <label>
+          <input id="3027" name="3027" type="checkbox" value="Grapefruit" />
+          <for>Grapefruit</for>
+        </label>
+        <label>
+          <input id="3028" name="3028" type="checkbox" value="Dates" />
+          <for>Dates</for>
+        </label>
+        <label>
+          <input id="3029" name="3029" type="checkbox" value="Coconut" />
+          <for>Coconut</for>
+        </label>
+        <label>
+          <input id="3030" name="3030" type="checkbox" value="Cherry" />
+          <for>Cherry</for>
+        </label>
+        <label>
+          <input id="3031" name="3031" type="checkbox" value="Peach" />
+          <for>Peach</for>
+        </label>
+        <label>
+          <input id="3032" name="3032" type="checkbox" value="Apricots" />
+          <for>Apricots</for>
+        </label>
+        <label>
+          <input id="3034" name="3034" type="checkbox" value="Pineapple" />
+          <for>Pineapple</for>
+        </label>
+        <label>
+          <input id="3035" name="3035" type="checkbox" value="Guava" />
+          <for>Guava</for>
+        </label>
+        <label>
+          <input id="3036" name="3036" type="checkbox" value="Plum" />
+          <for>Plum</for>
         </label>
       </div>
       <div class="search">

@@ -1,7 +1,7 @@
 # FindRecipe Web Application
 
 In this web application, you can search for recipes by inputting ingredients.
-There are three categories: meat, vegetable, and fruit. That list out 15 common ingredients for each. Users can also enter the name of the ingredient in the search bar. Then the application will generate a list of recipes that includes the ingredients user inputted.
+There are three categories: meat, vegetable, and fruit. That list out common ingredients for each category. Users can also enter the name of the ingredient in the search bar if the ingredient is not in the list. Then the application will generate a list of recipes that includes the ingredients user inputted.
 
 ## Reference
 
