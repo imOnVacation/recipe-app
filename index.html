@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FindRecipe</title>
+    <!-- Main Page Layout Style -->
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link
       rel="stylesheet"
@@ -20,6 +21,7 @@
     <script defer src="web-project/recipe.js"></script>
   </head>
   <body class="mainPage">
+    <!-- Top Navigation Bar -->
     <div class="topnav">
       <div class="navbar">
         <a href="index.html">FindRecipe</a>
@@ -27,7 +29,9 @@
         <a href="about.html">About Us</a>
       </div>
     </div>
+    <!-- Form Container -->
     <form class="container rounded bg-light p-3 mt-5 mx-auto">
+      <!-- Brief welcome message and instructions -->
       <p class="intro-msg rounded mt-2 mb-4 text-center">
         Welcome to FindRecipe!<br />
         Select ingredient that you want in the checkbox.<br />
@@ -35,6 +39,7 @@
         You can also type the ingredients or recipe in the search bar.
       </p>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <!-- Meat, Vegetable and Fruit common ingredients portion-->
       <div class="checkboxes" id="Food">
         <h4>&#129385; Meat &#129385;</h4>
         <label>
@@ -392,6 +397,7 @@
           <for>Plum</for>
         </label>
       </div>
+      <!-- Search textbox and search icon portion -->
       <div class="search">
         <input
           type="text"
@@ -408,6 +414,7 @@
           <i class="fa fa-search"></i>
         </button>
       </div>
+      <!-- User selected ingredients portion -->
       <div class="check-input-container">
         <p class="text-center"><br />You Entered</p>
       </div>
@@ -417,6 +424,7 @@
       </div>
       <br />
       <div class="text-center">
+        <!-- Get result button, redirect to result.html -->
         <input
           type="submit"
           class="btn btn-primary text"
@@ -424,6 +432,7 @@
           id="submit"
           onclick="GoResult()"
         />
+        <!-- Reset button, refresh the main page, ease all selected ingredents -->
         <input
           type="reset"
           class="btn btn-secondary"

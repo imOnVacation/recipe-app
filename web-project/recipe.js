@@ -1,3 +1,5 @@
+//Vincent Liang and Leshi Chen
+
 const clickButtonHandler = (evt) => {
   const result = document.getElementById('receiptSearch').value;
   if (result) {
@@ -16,10 +18,8 @@ checks.on('change', function () {
     .clone()
     .each(function () {
       if (this.id && this.type && this.type === 'checkbox') {
-
         this.removeAttribute('value');
         this.style = 'display:none;';
-
       }
     });
   results.empty().append(clones);

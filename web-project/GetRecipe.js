@@ -1,3 +1,5 @@
+// Vincent Liang and Leshi Chen
+
 const apiKey = 'aa831ca91389498d9c312124f3ddc981';
 
 function GetRecipe() {
