@@ -122,7 +122,7 @@ label {
 }
 
 .mainPage {
-  background-image: url('web_background.jpeg');
+  background-image: url('bg-img.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
