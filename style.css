@@ -175,3 +175,31 @@ span.DisplayBox {
   margin-right: 11px;
   position: relative;
 }
+
+.container {
+  font-family: system-ui;
+}
+
+h3 {
+  text-align: center;
+  color: #4287f5;
+}
+
+.favorite-btn {
+  color: #e21a2a;
+  font-size: large;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  display: block;
+}
+
+.card .fa-favorite {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
