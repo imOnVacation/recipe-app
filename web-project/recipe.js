@@ -1,4 +1,4 @@
-const apiKey = '73c936ba2f1245898d8cc4a17a7968df';
+//Vincent Liang and Leshi Chen
 
 const clickButtonHandler = (evt) => {
   const result = document.getElementById('receiptSearch').value;
@@ -7,49 +7,69 @@ const clickButtonHandler = (evt) => {
   } else document.getElementById('receiptSearch').value += evt.value;
 };
 
+//function to copy all selected chekbox to the user input box
 var results = $('#myDiv'),
   checks = $('#Food input[type=checkbox]');
 
+//everytime a checkbox is click
 checks.on('change', function () {
   var clones = checks
+    //only copy those checked one
     .filter(':checked')
+    //check for next sibiling
     .next()
     .addBack()
+    //clone the collection
     .clone()
     .each(function () {
       if (this.id && this.type && this.type === 'checkbox') {
-        this.removeAttribute('id');
+        this.removeAttribute('value');
+        this.style = 'display:none;';
       }
     });
+  //since everytime the function will copy the whole checked collection, it will need to empty it then copy over with the newly add
   results.empty().append(clones);
 });
 
+//function to add user input in the search bar into the user selected box
 function addcheck() {
-  var checkbox = document.createElement('input');
-  checkbox.type = 'checkbox';
-  checkbox.id = document.getElementById('ingredients').value;
-  checkbox.name = document.getElementById('ingredients').value;
-  checkbox.value = document.getElementById('ingredients').value;
-  checkbox.class = 'campaignCheckBox';
-  checkbox.checked = true;
-
-  var label = document.createElement('label');
-  label.htmlFor = document.getElementById('ingredients').value;
-  label.appendChild(
-    document.createTextNode(document.getElementById('ingredients').value)
-  );
-
-  var container = document.getElementById('UserInput');
-  container.appendChild(checkbox);
-  container.appendChild(label);
+  var out = '';
+  var value = document.getElementById('ingredients').value; //get user input text
+  var check = document.getElementById(value); //check if user input is empty
+  if (!value) {
+    //alert user when empty input
+    window.alert('Please enter ingredient');
+  } else if (!check) {
+    //add user input as checkbox to user selected box
+    out += `<label id = ${value}>
+            <input id=${value} name=${value} class="userIn" type='checkbox' value=${value} checked=true onclick="ShowHideUserIn(this.checked, this.value)"/>${value}
+          </label>`;
+    document.querySelector('#UserInput').innerHTML += out;
+  } else {
+    //if exist then don't add
+    window.alert('You already have this ingredient in the box');
+  }
   event.preventDefault();
 }
 
+//Delete checkbox if user unclick those in the user selected box
+function ShowHideUserIn(ischecked, value) {
+  if (ischecked) $(`#${value}`).show();
+  else {
+    //delete the checkbox when uncheck
+    data = document.getElementById(value);
+    data.remove();
+  }
+}
+
+//refresh the page
 function reset() {
   history.go(0);
 }
 
+//transfer everything that checked into a string
 function showSelectedValues() {
+  //only get all value if checked
   return $('input[type=checkbox]:checked')
     .map(function () {
       return this.value;
@@ -58,55 +78,21 @@ function showSelectedValues() {
     .join(',');
 }
 
-function GetRecipe() {
+//once checked value had been transform to string make it to be array
+function GoResult() {
+  //transform to array
   var arr = showSelectedValues().toString().split(',');
+  //Remove duplicate data
   var unique = [...new Set(arr)];
+  //encode to URI
   unique = encodeURIComponent(unique);
-  var result = '';
-  fetch(
-    `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${unique}&number=30&ranking=2&ignorePantry=true&apiKey=${apiKey}`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      data.forEach((p) => {
-        var missed = '';
-        var i = 1;
-        p.missedIngredients.forEach((miss) => {
-          missed += `${i}. ${miss.name} <br>`;
-          ++i;
-        });
-        result += `
-          <div id="keyBoard" class="col-md-3 mt-2" style="display: inline-block">
-              <div class="card" style="width: 18rem;">
-                  <img src="${p.image}" class="card-img-top img-fluid" alt="keyboard">
-                  <div class="card-body">
-                      <h5 class="card-title" id="itemName">${p.title}</h5>
-                      <p class="card-text" id="itemDesc">Missed Ingredients Count: ${p.missedIngredientCount}</p>
-                      <p class="card-text""><h6>Missed Ingredients:</h6> ${missed}</p>
-                      <p class="card-text">Used ingredients Count: ${p.usedIngredientCount}</p>
-                      <a href="#" class="btn btn-primary" id="redirect" onClick = "GetURL(${p.id})">Get instruction</a>
-                  </div>
-              </div>
-          </div>`;
-      });
-      document.querySelector('#Out').innerHTML = result;
-    })
-    .catch(() => {
-      console.log('error');
-    });
-  event.preventDefault();
-}
-
-function GetURL(id) {
-  fetch(
-    `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${apiKey}`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      location.href = `${data.spoonacularSourceUrl}`;
-    })
-    .catch(() => {
-      console.log('error');
-    });
+  //store to local storage to get ready for next page
+  localStorage['checkArr'] = unique;
+  if (unique.length === 0) {
+    window.alert("You didn't select anything");
+  } else {
+    //relocate page
+    location.href = 'result.html';
+  }
   event.preventDefault();
 }

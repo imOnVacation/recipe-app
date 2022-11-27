@@ -1,5 +1,9 @@
+/* Google Front */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 
+/* --- Top Navigation Bar and buttons Style --- */
+/*     --- It will contain in all page ---      */
+/* Navigation bar at the top of the page style */
 .topnav {
   padding: 0px 3%;
   color: maroon;
@@ -8,6 +12,8 @@
   position: relative;
   font-weight: bold;
 }
+
+/* Each Button in the navigation bar style */
 .topnav a {
   color: maroon;
   padding: 16px 16px;
@@ -16,10 +22,43 @@
   display: block;
 }
 
-.navbar {
-  font-weight: bold;
+/* Welcome message and instructions style */
+.intro-msg {
+  border-style: dashed;
+  border-width: fit-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
+/* --- Main Page element Style --- */
+/* Main Page Container Style */
+.mainPage {
+  background-image: url('bg-img.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Category style */
+h4 {
+  color: maroon;
+  padding-top: 10px;
+}
+
+/* Make some space between checkbox and the text */
+input[type='checkbox'] {
+  width: 20px;
+}
+
+/* Make checkbox and test alignment and style */
+label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 120px;
+  text-indent: 5px;
+}
+
+/* Search Block style */
 .search {
   width: 70%;
   display: flex;
@@ -28,6 +67,7 @@
   margin: auto;
 }
 
+/* search text box style */
 .searchTerm {
   width: 100%;
   border: 1px solid lightgrey;
@@ -39,6 +79,7 @@
   color: black;
 }
 
+/* search bar icon button */
 .searchButton {
   width: 40px;
   height: 30px;
@@ -51,31 +92,7 @@
   font-size: 20px;
 }
 
-h4 {
-  color: maroon;
-  padding-top: 10px;
-}
-
-.intro-msg {
-  border-style: dashed;
-  border-width: fit-content;
-}
-
-input[type='checkbox'] {
-  width: 20px;
-}
-
-label {
-  display: inline-block;
-  vertical-align: middle;
-  width: 120px;
-  text-indent: 5px;
-}
-
-.List {
-  display: inline-block;
-}
-
+/* User Input Container Style */
 .check-input-container {
   display: block;
   margin: auto;
@@ -85,52 +102,20 @@ label {
   font-weight: bold;
 }
 
-.aboutStyle {
-  display: block;
-  margin: auto;
-  width: fit-content;
-  padding-top: 80px;
-  border-bottom: 2px solid maroon;
-}
-
-.aboutMsgStyle {
-  display: block;
-  margin: auto;
-  width: 50%;
-  padding-top: 30px;
-  font-size: 1.2em;
-}
-
-.email {
-  display: block;
-  margin: auto;
-  font-size: 1.2em;
-  text-decoration: underline;
-}
-
+/* To differentiate user selected from list or manually enter */
 .List {
-  display: block;
-  margin-right: 11px;
-  position: relative;
+  display: inline-block;
 }
 
-.DisplayBox {
-  display: block;
-  padding: 16px 16px;
-  margin-right: 11px;
-  position: relative;
-}
-.searchBar {
-  padding: 10px;
+/* User selected ingredients sytle: alignment, indent */
+.List for {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  text-indent: 5px;
 }
 
-.mainPage {
-  background-image: url('web_background.jpeg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
+/* User selected ingredients box style */
 .outer {
   border: 2px solid maroon;
   padding: 16px 16px;
@@ -140,16 +125,79 @@ label {
   height: auto;
 }
 
-.outer > div {
-  border: 1px solid green;
+/* --- About Page Style --- */
+/* About Page Title Style */
+.aboutStyle {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  padding-top: 80px;
+  border-bottom: 2px solid maroon;
 }
 
-.right {
-  float: right;
-  height: 60%;
-  background: cyan;
+/* About Page contents Style */
+.aboutMsgStyle {
+  display: block;
+  margin: auto;
+  width: 50%;
+  padding-top: 30px;
+  font-size: 1.2em;
 }
 
-.border {
-  background-color: #f6ad55;
+/* About Page email Style: underline */
+.email {
+  display: block;
+  margin: auto;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+/* --- Result Page & Liked Page Style --- */
+/* result and liked page title box style */
+.resultTitle {
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: darkblue;
+  border-style: groove;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: azure;
+  border: 1px solid lightgrey;
+}
+
+/* --- Result Page Style */
+/* Result from API style  */
+div.apiResultBlock {
+  margin: auto;
+  display: table-cell;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Each result block Style */
+span.DisplayBox {
+  display: block;
+  padding: 16px 16px;
+  margin-right: 11px;
+  position: relative;
+}
+
+.container {
+  font-family: system-ui;
+}
+
+h3 {
+  text-align: center;
+  color: #4287f5;
+}
+
+.favorite-btn {
+  color: #e21a2a;
+  font-size: large;
 }

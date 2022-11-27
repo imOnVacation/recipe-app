@@ -1,0 +1,42 @@
+<!-- Leshi Chen, Vincent Liang -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liked</title>
+    <!-- Liked Page Layout Style -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <script defer src="web-project/GetRecipe.js"></script>
+  </head>
+  <body onload="getLike()">
+    <!-- Top Navigation Bar -->
+    <div class="topnav">
+      <div class="navbar">
+        <a href="index.html">FindRecipe</a>
+        <a href="liked.html">&#128154; Liked Recipe &#128154;</a>
+        <a href="about.html">About Us</a>
+      </div>
+    </div>
+    <p class="resultTitle rounded mt-5 p-3 text-center">Liked Recipes</p>
+    <div class="text-center">
+      <input
+        tpye="button"
+        class="btn btn-secondary"
+        value="Remove all liked recipe"
+        id="reset"
+        onclick="remoceAllLike()"
+      />
+    </div>
+    <div class="apiResultBlock" id="LikeOutput">
+      <span class="DisplayBox" id="LikeOut"></span>
+      <div class="text-center" id="LikeError"></div>
+    </div>
+  </body>
+</html>
