@@ -1,3 +1,5 @@
+//Vincent Liang and Leshi Chen
+
 const clickButtonHandler = (evt) => {
   const result = document.getElementById('receiptSearch').value;
   if (result) {

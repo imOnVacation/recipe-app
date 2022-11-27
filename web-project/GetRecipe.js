@@ -1,4 +1,5 @@
-const apiKey = '73c936ba2f1245898d8cc4a17a7968df';
+const apiKey = 'aab52f4293104832b35749936dab6c40';
+// var LikeMap = new Map();
 
 function GetRecipe() {
   //get local storeage created from GoResult() function
@@ -24,10 +25,10 @@ function GetRecipe() {
         result += `
           <div id="keyBoard" class="col-md-3 mt-2" style="display: inline-block; padding:0.5rem;">
               <div class="card" style="width: auto; bg-success">
+                  <a href="" class="favorite-btn">
+                        <i class="material-icons" class = "fa-favorite" onclick ="Like(${p.id})">favorite_border</i>
+                  </a>
                   <img src="${p.image}" >
-                     <a href="" class="favorite-btn" onlick = >
-                        <i class="material-icons" class = "fa-favorite">favorite_border</i>
-                    </a>
                   <div class="card-body" >
                       <h5 class="card-title" id="itemName">${p.title}</h5>
                       <p class="card-text" id="itemDesc" style="color: crimson;"> 
@@ -51,7 +52,7 @@ function GetRecipe() {
       document.querySelector('#Out').innerHTML = result;
     })
     .catch(() => {
-      console.log('error');
+      console.log('error when getting recipe');
     });
   event.preventDefault();
 }
@@ -70,4 +71,71 @@ function GetURL(id) {
       console.log('error');
     });
   event.preventDefault();
+}
+
+function Like(id) {
+  fetch(
+    `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${apiKey}`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      var ingredients = '';
+      data.extendedIngredients.forEach((ingre) => {
+        ingredients += `${ingre.original} <br>`;
+      });
+      if (!localStorage['like']) localStorage['like'] = '';
+      localStorage['like'] += `
+          <div id=${data.title} class="col-md-3 mt-2" style="display: inline-block; padding:0.5rem;">
+              <div class="card" style="width: auto;" bg-success>
+                  <img src="${data.image}" >
+                  <div class="card-body" >
+                      <h5 class="card-title" id="itemName">${data.title}</h5>
+                      <p class="card-text"> Ingredients: ${ingredients}
+                      <p class="card-text"> Instruction: ${data.instructions}
+                  </div>
+              </div>
+          </div>`;
+      // LikeMap.set(
+      //   id,
+      //   `
+      //     <div id=${data.title} class="col-md-3 mt-2" style="display: inline-block; padding:0.5rem;">
+      //         <div class="card" style="width: auto;" bg-success>
+      //             <img src="${data.image}" >
+      //             <div class="card-body" >
+      //                 <h5 class="card-title" id="itemName">${data.title}</h5>
+      //                 <p class="card-text"> Ingredients: ${ingredients}
+      //                 <p class="card-text"> Instruction: ${data.instructions}
+      //             </div>
+      //         </div>
+      //     </div>`
+      // );
+      // localStorage.myMap = JSON.stringify(Array.from(LikeMap.entries()));
+    })
+    .catch(() => {
+      console.log('error when like');
+    });
+  event.preventDefault();
+}
+
+function getLike() {
+  if (localStorage['like'])
+    document.querySelector('#LikeOut').innerHTML = localStorage['like'];
+  else {
+    document.querySelector('#LikeError').innerHTML = `
+        <div  >
+            <h3 > Looks like you hadn't liked any recipe yet, try to like some! </h3>
+        </div>`;
+  }
+  // var result = '';
+  // console.log(LikeMap);
+  // LikeMap = new Map(JSON.parse(localStorage.myMap));
+  // LikeMap.forEach((value, keys) => {
+  //   result += keys;
+  // });
+  // document.querySelector('#LikeOut').innerHTML = result;
+}
+
+function remoceAllLike() {
+  localStorage.clear();
+  history.go(0);
 }
