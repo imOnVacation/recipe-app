@@ -25,6 +25,7 @@
       </div>
     </div>
     <p class="resultTitle rounded mt-5 p-3 text-center">Liked Recipes</p>
+    <!-- Remove all liked recipe button  -->
     <div class="text-center">
       <input
         tpye="button"
@@ -34,9 +35,10 @@
         onclick="remoceAllLike()"
       />
     </div>
+    <!-- Display liked recipes block -->
     <div class="apiResultBlock" id="LikeOutput">
       <span class="DisplayBox" id="LikeOut"></span>
-      <div class="text-center" id="LikeError"></div>
     </div>
+    <div class="noErrorMsg" id="LikeError"></div>
   </body>
 </html>

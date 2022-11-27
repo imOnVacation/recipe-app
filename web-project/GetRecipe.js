@@ -122,8 +122,8 @@ function getLike() {
     document.querySelector('#LikeOut').innerHTML = localStorage['like'];
   else {
     document.querySelector('#LikeError').innerHTML = `
-        <div  >
-            <h3 > Looks like you hadn't liked any recipe yet, try to like some! </h3>
+        <div class="noErrorMsg">
+            <p> Looks like you hadn't liked any recipe yet, try to like some! </p>
         </div>`;
   }
   // var result = '';
