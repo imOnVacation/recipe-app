@@ -21,3 +21,5 @@ After the user selected all the ingredients, the application will generate a lis
 ## Developer
 
 Vincent Liang and Leshi Chen
+
+## Deployed Site: https://imonvacation.github.io/recipe-app/index.html
